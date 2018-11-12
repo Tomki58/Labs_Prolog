@@ -1,0 +1,7 @@
+podmn(integer*,integer*).
+prinad(integer,integer*).
+prinad(El,[El|_]):- !.
+prinad(El,[_|Mnog]):-prinad(El,Mnog).
+podmn([],[]):- !.
+podmn([],[_]):- !.
+podmn(M1,M2):-prinad(El,M1),prinad(El,M2).
